@@ -44,11 +44,11 @@ class RestaurantController extends AbstractController
     }
 
     /**
-     * @Route("/question11", name="app_index")
+     * @Route("/find")
      */
     public function afficherRest()
     {
-        return $this->render('restaurant/find.html.twig', [
+        return $this->render('restaurant/restaurants.html.twig', [
             'restaurants' => $this->getDoctrine()->getRepository(Restaurant::class)->findLastSElements(),
         ]);
     }
