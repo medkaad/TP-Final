@@ -52,7 +52,8 @@ class Restaurant
 
     public function __construct()
     {
-        $this->setCreatedAt(new \DateTime());
+        $this->createdAt=new \DateTime();
+        //$this->setCreatedAt(new \DateTime());
         $this->restaurantPictures = new ArrayCollection();
         $this->reviews = new ArrayCollection();
     }
@@ -173,7 +174,7 @@ class Restaurant
     public function getAverageRating() : float
     {
         $sum = 0;
-        $total = 0;
+        $total = 0; 
         foreach($this->getReviews() as $review) {
             $sum += $review->getRating();
             $total++; 

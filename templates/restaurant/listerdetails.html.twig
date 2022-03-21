@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des restaurants{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Message</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Name city</th>
+            
+            
+            
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                
+                <td>{{ restaurants[0].reviewmessage }}</td>
+                <td>{{ restaurants[0].reviewrating }}</td>
+                <td>{{ restaurants[0].cityname }}</td>
+                
+            </tr>
+        </tbody>
+        </table>
+        
+    </div>
+{% endblock %}

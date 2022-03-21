@@ -4,14 +4,29 @@
 
 {% block body %}
 
-    <ul>
+    <div class="container">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
         {% for restaurant in restaurants %}
-            <li>
-                {{ restaurant.name }} (Moyenne de {{ restaurant.averageRating | number_format(2, ',') }})<br>
-                <small>{{ restaurant.description }}</small>
-            </li>
+            <tr>
+                <th scope="row">{{ restaurant.id }}</th>
+                <td>{{ restaurant.name }}</td>
+                <td>{{ restaurant.description }}</td>
+                <td>{{ restaurant.getCreatedAt()|date('Y-m-d') }}</td>
+                <td>{{ restaurant.averageRating | number_format(2, ',') }}</td>
+                
+                
+            </tr>
         {% endfor %}
-
-    </ul>
+        </tbody>
+        </table>
 
 {% endblock %}

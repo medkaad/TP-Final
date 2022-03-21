@@ -44,7 +44,7 @@ class RestaurantController extends AbstractController
     }
 
     /**
-     * @Route("/restaurants/{id}")
+     * @Route("/restaurants/{id}", name="app_search")
      */
     public function chercher_restaurant(Request $request, $id): Response
     {
@@ -65,11 +65,50 @@ class RestaurantController extends AbstractController
     }
 
     /**
-    * @Route("/meilleur", name="app_index", methods={"GET"})
+     * @Route("/details/{id}", name="detailrestaurant")
+     */
+    public function DetailsRest($id)
+    {
+        return $this->render('restaurant/listerdetails.html.twig', [
+            'restaurants' => $this->getDoctrine()->getRepository(Restaurant::class)->detailsRest($id),
+        ]);
+    }
+
+    /**
+     * @Route("/moyen/{id}")
+     */
+    public function afficheMoyen($id)
+    {
+        return $this->render('restaurant/moyen.html.twig', [
+            'restaurants' => $this->getDoctrine()->getRepository(Restaurant::class)->restaurantrating($id),
+        ]);
+    }
+
+    /**
+    * @Route("/meilleur", methods={"GET"})
     */
     public function Meilleur()
     {
-        $tenBestRestaurantsId = $this->getDoctrine()->getRepository(Review::class)->findBestTenRatings();
+        $tenBestRestaurantsId = $this->getDoctrine()->getRepository(Review::class)->findBestTreeRatings();
+
+        $tenBestRestaurants = array_map(function($data) {
+            return $this->getDoctrine()->getRepository(Restaurant::class)->find($data['restaurantId']);
+        }, $tenBestRestaurantsId);
+        $tenBestRestaurants = [];
+        foreach($tenBestRestaurantsId as $data) {
+            $tenBestRestaurants[] = $this->getDoctrine()->getRepository(Restaurant::class)->find($data['restaurantId']);
+        }
+        return $this->render('restaurant/index.html.twig', [
+            'restaurants' => $tenBestRestaurants,
+        ]);
+    }
+
+    /**
+    * @Route("/bestRe", methods={"GET"})
+    */
+    public function BestR()
+    {
+        $tenBestRestaurantsId = $this->getDoctrine()->getRepository(Review::class)->findBestRatings();
 
         $tenBestRestaurants = array_map(function($data) {
             return $this->getDoctrine()->getRepository(Restaurant::class)->find($data['restaurantId']);

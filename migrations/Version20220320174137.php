@@ -21,10 +21,10 @@ final class Version20220320174137 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql(file_get_contents("./scripts/city.sql"));
-        $this->addSql(file_get_contents("./scripts/restaurant.sql"));
-        $this->addSql(file_get_contents("./scripts/user.sql"));
-        $this->addSql(file_get_contents("./scripts/restaurantPicture.sql"));
-        $this->addSql(file_get_contents("./scripts/review.sql"));
+        // $this->addSql(file_get_contents("./scripts/restaurant.sql"));
+        // $this->addSql(file_get_contents("./scripts/user.sql"));
+        // $this->addSql(file_get_contents("./scripts/restaurantPicture.sql"));
+        // $this->addSql(file_get_contents("./scripts/review.sql"));
 
     }
 

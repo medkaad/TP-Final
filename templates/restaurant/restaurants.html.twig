@@ -3,7 +3,7 @@
 {% block title %}Liste des restaurants{% endblock %}
 
 {% block body %}
-    <div class="container">
+    
         <table class="table">
         <thead>
         <tr>
@@ -11,6 +11,9 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Date</th>
+            <th scope="col">Details</th>
+            
+             
             
         </tr>
         </thead>
@@ -21,10 +24,12 @@
                 <td>{{ data.name }}</td>
                 <td>{{ data.description }}</td>
                 <td>{{ data.getCreatedAt()|date('Y-m-d') }}</td>
+                <td><a href="http://127.0.0.1:40443/details/{{data.id}}">Details</a></td>
                 
             </tr>
         {% endfor %}
         </tbody>
         </table>
+        
     </div>
 {% endblock %}

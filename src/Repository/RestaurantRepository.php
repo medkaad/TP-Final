@@ -21,6 +21,20 @@ class RestaurantRepository extends ServiceEntityRepository
         parent::__construct($registry, Restaurant::class);
     }
 
+    public function detailsRest($id): array
+    {
+        $entityManager = $this->getEntityManager();
+        $query = $entityManager->createQuery(
+        'SELECT r.rating as reviewrating  , r.message as reviewmessage  , c.name as cityname
+        FROM App\Entity\Restaurant re , App\Entity\City c,
+        App\Entity\Review r where r.restaurant = re.id AND re.city=c.id
+        AND re.id = :id '
+        )->setParameter('id', $id);
+        //dd($query->getResult());
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
     public function findLastSElements() {
         return $this->createQueryBuilder('r')
             ->orderBy('r.createdAt', 'DESC')
@@ -29,6 +43,24 @@ class RestaurantRepository extends ServiceEntityRepository
             ->getResult()
             ;
     }
+
+
+    public function restaurantrating($id): array
+    {
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+        'SELECT avg(r.rating)
+        FROM App\Entity\Restaurant re ,
+        App\Entity\review r where r.restaurant = re.id
+        AND re.id = :id GROUP BY re.id'
+        )->setParameter('id', $id);;
+        //dd($query->getResult());
+        // returns an array of Product objects
+        return $query->getResult();
+    }
+
+    
 
     /**
      * @throws ORMException

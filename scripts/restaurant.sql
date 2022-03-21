@@ -1,10 +1,11 @@
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (1,1, "Maklati1","M1");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (2,4, "Maklati2","M2", );
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (4,5, "Maklati9","M9");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (3,2, "Maklati3","M3");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (5,9, "Maklati4","M4");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (6,10, "Maklati5","M5");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (7,8, "Maklati6","M6");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (8,1, "Maklati7","M7");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (9,3, "Maklati8","M8");
-INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (10,1, "Maklati10","M10");
+
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (1,1, "Maklati1","M1");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (2,4, "Maklati2","M2", );
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (4,5, "Maklati9","M9");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (3,2, "Maklati3","M3");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (5,9, "Maklati4","M4");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (6,10, "Maklati5","M5");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (7,8, "Maklati6","M6");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (8,1, "Maklati7","M7");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (9,3, "Maklati8","M8");
+-- INSERT INTO `restaurant` (`id`, `city_id`,`name`, `description`) VALUES (10,1, "Maklati10","M10");

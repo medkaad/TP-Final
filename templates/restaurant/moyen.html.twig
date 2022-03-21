@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des restaurants{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Moyenne</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in restaurants %}
+            <tr>
+                <td>{{restaurants[0][1]}}</td>   
+            </tr>
+        {% endfor %}
+        </tbody>
+        </table>
+    </div>
+{% endblock %}

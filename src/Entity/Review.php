@@ -110,6 +110,7 @@ class Review
     }
 
     public function __construct(){
+        $this->createdAt=new \DateTime();
         $this->setCreatedAt(new \DateTime());
         $this->childs = new ArrayCollection();
     }

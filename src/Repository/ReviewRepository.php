@@ -33,14 +33,26 @@ class ReviewRepository extends ServiceEntityRepository
         ;
     }
 
-    public function findBestTenRatings() {
+    public function findBestTreeRatings() {
 
         return $this->createQueryBuilder('r')
             ->select('AVG(r.rating) as average', 'restaurant.id as restaurantId')
             ->innerJoin('r.restaurant', 'restaurant')
             ->groupBy('restaurant')
             ->orderBy('AVG(r.rating)', 'DESC')
-            ->setMaxResults(10)
+            ->setMaxResults(3)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findBestRatings() {
+
+        return $this->createQueryBuilder('r')
+            ->select('AVG(r.rating) as average', 'restaurant.id as restaurantId')
+            ->innerJoin('r.restaurant', 'restaurant')
+            ->groupBy('restaurant')
+            ->orderBy('AVG(r.rating)', 'DESC')
             ->getQuery()
             ->getResult()
             ;
