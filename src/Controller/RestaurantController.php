@@ -44,6 +44,17 @@ class RestaurantController extends AbstractController
     }
 
     /**
+     * @Route("/restaurants/{id}")
+     */
+    public function chercher_restaurant(Request $request, $id): Response
+    {
+        $data = $this->getDoctrine()->getRepository(Restaurant::class)->find($id);
+        return $this->render('restaurant/find.html.twig', [
+            'restaurants' => $data,
+        ]);
+    }
+
+    /**
      * @Route("/find")
      */
     public function afficherRest()

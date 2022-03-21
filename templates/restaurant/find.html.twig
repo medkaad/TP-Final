@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des restaurants{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Date</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">{{ restaurants.id }}</th>
+                <td>{{ restaurants.name }}</td>
+                <td>{{ restaurants.description }}</td>
+                <td>{{ restaurants.getCreatedAt()|date('Y-m-d') }}</td>
+                
+            </tr>
+        </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -176,9 +176,13 @@ class Restaurant
         $total = 0;
         foreach($this->getReviews() as $review) {
             $sum += $review->getRating();
-            $total++;
+            $total++; 
         }
         return $sum/$total;
+    }
+
+    public function __toString() {
+        return $this->name;
     }
 
 }
