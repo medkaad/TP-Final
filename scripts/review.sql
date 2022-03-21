@@ -1,0 +1,10 @@
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (1, 1,4, "message1", 7);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (2, 6,8, "message2", 23);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (3, 7,3, "message3", 34);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (4, 1,4, "message4", 7);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (5, 1,4, "message5", 3);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (6, 4,6, "message6", 4);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (7, 4,3, "message7", 7);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (8, 2,10, "message8", 8);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (9, 8,2, "message9", 9);
+INSERT INTO `review` (`id`, `restaurant_id`,`user_id`, `message`, `rating`) VALUES (10, 10,1, "message10", 10);

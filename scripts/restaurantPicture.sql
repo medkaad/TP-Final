@@ -1,0 +1,10 @@
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (1,1,"filename1");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (2,4,"filename2");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (3,1,"filename3");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (4,2,"filename4");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (5,9,"filename5");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (6,7,"filename6");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (7,4,"filename7");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (8,2,"filename8");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (9,3,"filename9");
+INSERT INTO `restaurant_picture` (`id`, `restaurant_id`,`filename`) VALUES (10,1,"filename10");

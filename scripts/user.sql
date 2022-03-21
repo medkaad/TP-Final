@@ -1,0 +1,10 @@
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (1,7,"username1", "password1");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (2,5,"username2", "password2");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (3,4,"username3", "password3");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (4,4,"username4", "password4");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (5,4,"username5", "password5");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (6,9,"username6", "password6");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (7,4,"username7", "password7");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (8,4,"username8", "password8");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (9,3,"username9", "password9");
+INSERT INTO `user` (`id`, `city_id`,`username`,`password`) VALUES (10,5,"username10", "password10");
